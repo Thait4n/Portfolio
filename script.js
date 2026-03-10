@@ -119,3 +119,89 @@ function initReveal() {
 }
 
 initReveal();
+
+function initMetricCharts() {
+  const charts = document.querySelectorAll(".metric__chart");
+  if (!charts.length) return;
+
+  charts.forEach((canvas) => {
+    const raw = canvas.dataset.points || "";
+    const values = raw
+      .split(",")
+      .map((v) => Number.parseFloat(v.trim()))
+      .filter((v) => Number.isFinite(v));
+
+    if (values.length < 2) return;
+
+    drawMetricSparkline(canvas, values, canvas.dataset.color || "#ffb078");
+  });
+}
+
+function drawMetricSparkline(canvas, values, color) {
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+
+  const dpr = Math.max(1, window.devicePixelRatio || 1);
+  const width = canvas.clientWidth || 280;
+  const height = canvas.clientHeight || 72;
+  const pad = 8;
+
+  canvas.width = Math.floor(width * dpr);
+  canvas.height = Math.floor(height * dpr);
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+  const min = Math.min(...values);
+  const max = Math.max(...values);
+  const range = max - min || 1;
+
+  const points = values.map((value, index) => {
+    const x = pad + (index / (values.length - 1)) * (width - pad * 2);
+    const y = height - pad - ((value - min) / range) * (height - pad * 2);
+    return { x, y };
+  });
+
+  const duration = 900;
+  const start = performance.now();
+
+  function frame(now) {
+    const progress = Math.min(1, (now - start) / duration);
+    const visibleCount = Math.max(2, Math.ceil(progress * points.length));
+
+    ctx.clearRect(0, 0, width, height);
+
+    ctx.strokeStyle = "rgba(255,255,255,0.08)";
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(pad, height - pad);
+    ctx.lineTo(width - pad, height - pad);
+    ctx.stroke();
+
+    const visible = points.slice(0, visibleCount);
+    if (visible.length > 1) {
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 2.3;
+      ctx.lineJoin = "round";
+      ctx.lineCap = "round";
+      ctx.beginPath();
+      ctx.moveTo(visible[0].x, visible[0].y);
+      for (let i = 1; i < visible.length; i += 1) {
+        ctx.lineTo(visible[i].x, visible[i].y);
+      }
+      ctx.stroke();
+    }
+
+    const last = visible[visible.length - 1];
+    if (last) {
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.arc(last.x, last.y, 3, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (progress < 1) requestAnimationFrame(frame);
+  }
+
+  requestAnimationFrame(frame);
+}
+
+initMetricCharts();

@@ -173,6 +173,19 @@ body.projects-only {
   font-size: 0.86rem;
 }
 
+.metric__chart {
+  width: 100%;
+  height: 72px;
+  display: block;
+  margin-top: 8px;
+}
+
+.metric__trend {
+  color: #c2c9d9;
+  font-size: 0.74rem;
+  letter-spacing: 0.25px;
+}
+
 .hero__glow {
   position: absolute;
   right: -8%;
@@ -532,5 +545,186 @@ body.projects-only {
 
   #panel-right {
     width: 100%;
+  }
+}
+
+.contact-page {
+  max-width: 1080px;
+}
+
+.contact-hero {
+  display: grid;
+  gap: 10px;
+  max-width: 72ch;
+}
+
+.contact-hero h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  line-height: 0.95;
+  letter-spacing: 1px;
+}
+
+.contact-hero p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.contact-priority {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 14px;
+}
+
+.priority-card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  padding: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.priority-card--main {
+  background: linear-gradient(130deg, rgba(255, 106, 61, 0.26), rgba(255, 183, 125, 0.08));
+}
+
+.priority-label {
+  font-size: 0.78rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffd8bf;
+}
+
+.priority-card h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2.7rem);
+  letter-spacing: 0.8px;
+  overflow-wrap: anywhere;
+}
+
+.contact-links {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: #ffe0cc;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(13, 17, 28, 0.82);
+  min-height: 82px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.contact-link i {
+  font-size: 1.1rem;
+}
+
+.contact-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 188, 150, 0.7);
+}
+
+.collab-hero {
+  display: grid;
+  gap: 12px;
+  max-width: 74ch;
+}
+
+.collab-hero h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2.2rem, 6vw, 4.2rem);
+  line-height: 0.95;
+}
+
+.collab-hero p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.collab-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.collab-card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.collab-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+}
+
+.collab-card__body {
+  padding: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.collab-tag {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffd2b8;
+}
+
+.collab-card h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.45rem;
+  letter-spacing: 0.7px;
+}
+
+.collab-card p {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.collab-note {
+  border: 1px dashed rgba(255, 197, 160, 0.4);
+  border-radius: 14px;
+  padding: 14px;
+  color: #f6d8c4;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1080px) {
+  .contact-priority {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .collab-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .contact-links {
+    grid-template-columns: 1fr;
+  }
+
+  .collab-grid {
+    grid-template-columns: 1fr;
   }
 }
