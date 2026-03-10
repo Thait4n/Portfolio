@@ -5,8 +5,8 @@
   --bg-soft: #131826;
   --ink: #f2f4f8;
   --muted: #a9b0c2;
-  --accent: #ff6a3d;
-  --accent-soft: #ff8f59;
+  --accent: #1fd97a;
+  --accent-soft: #47e897;
   --line: rgba(255, 255, 255, 0.1);
   --card: rgba(16, 20, 33, 0.76);
   --shadow: 0 24px 54px rgba(0, 0, 0, 0.35);
@@ -22,8 +22,8 @@ body {
   font-family: "Sora", sans-serif;
   color: var(--ink);
   background:
-    radial-gradient(circle at 18% 8%, rgba(255, 106, 61, 0.22), transparent 32%),
-    radial-gradient(circle at 78% -8%, rgba(255, 164, 90, 0.18), transparent 34%),
+    radial-gradient(circle at 18% 8%, rgba(31, 217, 122, 0.13), transparent 32%),
+    radial-gradient(circle at 78% -8%, rgba(71, 232, 151, 0.08), transparent 34%),
     linear-gradient(145deg, #07090f, #0e1523 60%, #0a0d16);
   overflow: hidden;
 }
@@ -75,8 +75,8 @@ body.projects-only {
   font-size: 1.45rem;
   letter-spacing: 1px;
   color: #090b11;
-  background: linear-gradient(140deg, var(--accent), #ffd16d);
-  box-shadow: 0 10px 26px rgba(255, 106, 61, 0.3);
+  background: linear-gradient(140deg, var(--accent), #5be4a0);
+  box-shadow: 0 10px 26px rgba(31, 217, 122, 0.28);
 }
 
 .nav {
@@ -122,7 +122,7 @@ body.projects-only {
   text-transform: uppercase;
   letter-spacing: 2.2px;
   font-size: 0.74rem;
-  color: #ffd8bf;
+  color: #b8ffda;
 }
 
 .hero h1 {
@@ -164,7 +164,7 @@ body.projects-only {
 .metric__value {
   font-family: "Bebas Neue", sans-serif;
   font-size: 2rem;
-  color: #ffd490;
+  color: #7dffc5;
   letter-spacing: 1px;
 }
 
@@ -193,7 +193,7 @@ body.projects-only {
   width: 280px;
   height: 280px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 106, 61, 0.4), transparent 64%);
+  background: radial-gradient(circle, rgba(31, 217, 122, 0.35), transparent 64%);
   filter: blur(10px);
   animation: pulse 4s ease-in-out infinite;
   z-index: -1;
@@ -272,7 +272,7 @@ body.projects-only {
 
 .highlight a,
 .card a {
-  color: #ffc79d;
+  color: #7dffb5;
   text-decoration: none;
   font-size: 0.88rem;
   font-weight: 600;
@@ -280,7 +280,7 @@ body.projects-only {
 
 .highlight a:hover,
 .card a:hover {
-  color: #ffdcbf;
+  color: #b0ffd0;
 }
 
 .video__embed {
@@ -345,7 +345,7 @@ body.projects-only {
 
 .contact {
   border: 1px solid var(--line);
-  background: linear-gradient(130deg, rgba(255, 106, 61, 0.18), rgba(255, 175, 110, 0.09));
+  background: linear-gradient(130deg, rgba(31, 217, 122, 0.13), rgba(71, 232, 151, 0.05));
   border-radius: 18px;
   padding: 24px;
 }
@@ -359,7 +359,7 @@ body.projects-only {
 
 .contact p {
   max-width: 70ch;
-  color: #fae5d8;
+  color: #d8faeb;
   line-height: 1.65;
   margin-bottom: 15px;
 }
@@ -383,23 +383,23 @@ body.projects-only {
   font-size: 0.92rem;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   background: linear-gradient(130deg, var(--accent), var(--accent-soft));
-  color: #140f0d;
+  color: #071510;
 }
 
 .btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 10px 22px rgba(255, 106, 61, 0.3);
+  box-shadow: 0 10px 22px rgba(31, 217, 122, 0.28);
 }
 
 .btn--ghost {
   background: transparent;
-  color: #ffd9c2;
-  border: 1px solid rgba(255, 181, 142, 0.42);
+  color: #c2ffd9;
+  border: 1px solid rgba(142, 255, 181, 0.42);
 }
 
 .btn--ghost:hover {
   box-shadow: none;
-  border-color: rgba(255, 200, 168, 0.8);
+  border-color: rgba(168, 255, 200, 0.8);
 }
 
 /* Scene intro */
@@ -422,7 +422,7 @@ body.projects-only {
 }
 
 #panel-right {
-  background: linear-gradient(140deg, #101726, #231d1b 70%, #2f1712);
+  background: linear-gradient(140deg, #0d1a10, #0a1d12 70%, #071510);
   color: white;
   display: flex;
   flex-direction: column;
@@ -440,7 +440,7 @@ body.projects-only {
 }
 
 #panel-right p {
-  color: #e7cad1;
+  color: #c8e7d0;
   max-width: 34ch;
   line-height: 1.6;
 }
@@ -452,7 +452,7 @@ body.projects-only {
   cursor: pointer;
   font-weight: 700;
   background: linear-gradient(130deg, var(--accent), var(--accent-soft));
-  color: #190f0b;
+  color: #071510;
 }
 
 .socials {
@@ -587,14 +587,14 @@ body.projects-only {
 }
 
 .priority-card--main {
-  background: linear-gradient(130deg, rgba(255, 106, 61, 0.26), rgba(255, 183, 125, 0.08));
+  background: linear-gradient(130deg, rgba(31, 217, 122, 0.18), rgba(71, 232, 151, 0.05));
 }
 
 .priority-label {
   font-size: 0.78rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #ffd8bf;
+  color: #b8ffda;
 }
 
 .priority-card h2 {
@@ -612,7 +612,7 @@ body.projects-only {
 
 .contact-link {
   text-decoration: none;
-  color: #ffe0cc;
+  color: #c2ffe0;
   border: 1px solid var(--line);
   border-radius: 14px;
   background: rgba(13, 17, 28, 0.82);
@@ -631,7 +631,7 @@ body.projects-only {
 
 .contact-link:hover {
   transform: translateY(-2px);
-  border-color: rgba(255, 188, 150, 0.7);
+  border-color: rgba(142, 255, 188, 0.7);
 }
 
 .collab-hero {
@@ -682,7 +682,7 @@ body.projects-only {
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #ffd2b8;
+  color: #b8ffd2;
 }
 
 .collab-card h3 {
@@ -698,11 +698,84 @@ body.projects-only {
 }
 
 .collab-note {
-  border: 1px dashed rgba(255, 197, 160, 0.4);
+  border: 1px dashed rgba(160, 255, 197, 0.4);
   border-radius: 14px;
   padding: 14px;
-  color: #f6d8c4;
+  color: #c4f6d8;
   font-size: 0.9rem;
+}
+
+/* ── Behance embed section ───────────────────────────────────── */
+.behance-embed {
+  padding: 80px var(--side);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.behance-embed h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+
+.behance-embed__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 404px));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.behance-embed__frame {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  height: 316px;
+}
+
+.behance-embed__frame iframe {
+  display: block;
+  /* légèrement plus large pour clipper la scrollbar native */
+  width: calc(100% + 18px);
+  height: 100%;
+  margin-right: -18px;
+}
+
+.behance-embed__cta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  align-self: flex-start;
+  margin-top: 0.4rem;
+  padding: 0.75rem 1.6rem;
+  background: var(--accent);
+  color: #fff;
+  font-family: 'Sora', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.behance-embed__cta:hover {
+  background: var(--accent-soft);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1080px) {
+  .behance-embed__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .behance-embed__grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 1080px) {
