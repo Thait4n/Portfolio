@@ -11,61 +11,111 @@
   <div id="project-container">
     <header class="topbar">
       <div class="logo">TH</div>
-      <nav class="nav">
+      <nav class="nav" id="main-nav">
         <a href="index.html">Accueil</a>
         <a href="presentation.html">Présentation</a>
         <a href="projets.html">Projets</a>
         <a class="active" href="collaboration.html">Collaborations</a>
         <a href="contact.html">Contact</a>
       </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </header>
 
     <main class="page">
+
       <section class="collab-hero" data-reveal>
-        <p class="hero__kicker">Collaborations</p>
-        <h1>Projets videos realises avec d'autres createurs</h1>
+        <p class="hero__kicker">Engagements &amp; Associations</p>
+        <h1>Projets réalisés pour des associations</h1>
         <p>
-          Cette page centralise les collaborations marquantes: format, role, et impact.
-          Le but est de montrer ta capacite a co-creer, t'adapter a une equipe et livrer un resultat solide.
+          En dehors du code, je mets mes compétences vidéo et communication au service de causes qui me tiennent à cœur.
+          Voici les trois collaborations associatives menées : contenu, sensibilisation et mobilisation.
         </p>
       </section>
 
-      <section class="collab-grid" data-reveal>
-        <article class="collab-card">
-          <img src="assets/images/Shay_antidote.png" alt="Collaboration video 1">
-          <div class="collab-card__body">
-            <p class="collab-tag">Collaboration YouTube</p>
-            <h3>Format Societe</h3>
-            <p>Role: conception editoriale, structure narrative et montage final pour un rendu clair et rythme.</p>
-            <a href="https://www.youtube.com/@thatan" target="_blank" rel="noreferrer">Voir la chaine</a>
+      <!-- SOS AMITIÉ -->
+      <section class="assoc-section" data-reveal>
+        <div class="assoc-header">
+          <div class="assoc-badge assoc-badge--amitie">SOS AMITIÉ</div>
+          <div>
+            <h2>Santé mentale &amp; écoute</h2>
+            <p>SOS Amitié est une association française de soutien psychologique par téléphone et chat, disponible 24h/24. J'ai réalisé une vidéo qui dénonce les tabous autour de la santé mentale et le coût exorbitant des soins psychologiques en France, pour sensibiliser et soutenir leur mission.</p>
+            <p class="assoc-role"><strong>Rôle :</strong> conception du sujet, tournage, montage, diffusion &mdash; en autonomie complète.</p>
           </div>
-        </article>
-
-        <article class="collab-card">
-          <img src="assets/images/PHOTO_PP.png" alt="Collaboration video 2">
-          <div class="collab-card__body">
-            <p class="collab-tag">Collaboration Twitch</p>
-            <h3>Live + Debrief</h3>
-            <p>Role: animation, coordination et adaptation en temps reel avec co-createurs pendant le live.</p>
-            <a href="https://www.twitch.tv/im_thatan" target="_blank" rel="noreferrer">Voir Twitch</a>
+        </div>
+        <div class="assoc-media">
+          <div class="assoc-embed">
+            <p class="assoc-embed__label"><i class="fa-brands fa-youtube"></i> Vidéo YouTube</p>
+            <div class="embed-ratio">
+              <iframe src="https://www.youtube.com/embed/qXrIlaWMrbA?si=9U_bJEHzMPkeobbo" title="Vidéo SOS Amitié" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
           </div>
-        </article>
-
-        <article class="collab-card">
-          <img src="assets/images/Shay_antidote.png" alt="Collaboration video 3">
-          <div class="collab-card__body">
-            <p class="collab-tag">Collaboration Multi-format</p>
-            <h3>Shorts / TikTok</h3>
-            <p>Role: adaptation en format court pour maximiser la retention et la diffusion organique.</p>
-            <a href="https://www.tiktok.com/@thatan" target="_blank" rel="noreferrer">Voir TikTok</a>
+          <div class="assoc-embed">
+            <p class="assoc-embed__label"><i class="fa-brands fa-behance"></i> Projet Behance</p>
+            <div class="embed-ratio embed-ratio--behance">
+              <iframe src="https://www.behance.net/embed/project/245281487?ilo0=1" allowfullscreen lazyload frameborder="0" scrolling="no" allow="clipboard-write" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
           </div>
-        </article>
+        </div>
       </section>
 
-      <section class="collab-note" data-reveal>
-        Pour une version finale ultra precise, je peux remplacer ces fiches par tes collaborations exactes
-        avec titres, liens video et resultats (vues, retention, role detaille).
+      <!-- MKF LYON -->
+      <section class="assoc-section" data-reveal>
+        <div class="assoc-header">
+          <div class="assoc-badge assoc-badge--mkf">MKF LYON</div>
+          <div>
+            <h2>Nouvelle-Calédonie : 2 ans après</h2>
+            <p>MKF Lyon est une association engagée pour la Nouvelle-Calédonie et ses ressortissants en métropole. J'ai réalisé un documentaire qui revient sur la situation du territoire deux ans après les événements de 2024 : reconstruction, mémoire et résilience d'une population.</p>
+            <p class="assoc-role"><strong>Rôle :</strong> reportage documentaire &mdash; écriture, tournage, montage, direction artistique.</p>
+          </div>
+        </div>
+        <div class="assoc-media">
+          <div class="assoc-embed">
+            <p class="assoc-embed__label"><i class="fa-brands fa-youtube"></i> Documentaire YouTube</p>
+            <div class="embed-ratio">
+              <iframe src="https://www.youtube.com/embed/qdVbH6weUp4?si=5n0fZPzu5FYXYmNH" title="Documentaire Nouvelle-Calédonie" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="assoc-embed">
+            <p class="assoc-embed__label"><i class="fa-brands fa-behance"></i> Projet Behance</p>
+            <div class="embed-ratio embed-ratio--behance">
+              <iframe src="https://www.behance.net/embed/project/245213765?ilo0=1" allowfullscreen lazyload frameborder="0" scrolling="no" allow="clipboard-write" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+          </div>
+        </div>
       </section>
+
+      <!-- SOS MÉDITERRANÉE -->
+      <section class="assoc-section" data-reveal>
+        <div class="assoc-header">
+          <div class="assoc-badge assoc-badge--med">SOS MÉDITERRANÉE</div>
+          <div>
+            <h2>Semi-marathon &amp; prise de conscience</h2>
+            <p>SOS Méditerranée est une organisation européenne de sauvetage en mer qui opère en Méditerranée centrale, l’une des routes migratoires les plus dangereuses au monde. J'ai couru le semi-marathon de Paris sous leurs couleurs et réalisé des contenus pour dénoncer les agissements en mer et sensibiliser à leur mission.</p>
+            <p class="assoc-role"><strong>Rôle :</strong> ambassadeur sportif, création de contenus de sensibilisation &mdash; posts, direction visuelle.</p>
+          </div>
+        </div>
+        <div class="assoc-media">
+          <div class="assoc-embed">
+            <p class="assoc-embed__label"><i class="fa-brands fa-youtube"></i> Short YouTube &mdash; Sensibilisation</p>
+            <a class="short-thumb" href="https://youtube.com/shorts/rV_MO-iBawg" target="_blank" rel="noreferrer">
+              <img src="https://img.youtube.com/vi/rV_MO-iBawg/hqdefault.jpg" alt="Short SOS Méditerranée">
+              <div class="short-thumb__overlay">
+                <i class="fa-brands fa-youtube"></i>
+                <span>Voir le Short</span>
+              </div>
+            </a>
+          </div>
+          <div class="assoc-embed">
+            <p class="assoc-embed__label"><i class="fa-brands fa-behance"></i> Projet Behance &mdash; Semi-marathon &amp; sensibilisation</p>
+            <div class="embed-ratio embed-ratio--behance">
+              <iframe src="https://www.behance.net/embed/project/245469113?ilo0=1" allowfullscreen lazyload frameborder="0" scrolling="no" allow="clipboard-write" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
   </div>
 

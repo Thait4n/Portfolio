@@ -10,21 +10,28 @@
 <body>
 	<header class="topbar">
 		<div class="logo">TH</div>
-		<nav class="nav">
+		<nav class="nav" id="main-nav">
 			<a href="index.html">Accueil</a>
 			<a class="active" href="presentation.html">Présentation</a>
 			<a href="projets.html">Projets</a>
 			<a href="collaboration.html">Collaborations</a>
 			<a href="contact.html">Contact</a>
 		</nav>
+		<button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">
+			<span></span><span></span><span></span>
+		</button>
 	</header>
 
 	<header class="hero">
-		<div class="hero__cloud" aria-hidden="true"></div>
-		<div class="hero__content">
-			<p class="hero__eyebrow">Parcours</p>
-			<h1>Qui est Erthan NEMORIN ?</h1>
-			<p>Étudiant en BUT Informatique, alternant Python au CEA, et créateur de contenu.</p>
+		<div class="hero__cloud">
+			<div class="hero__orb">
+				<img src="assets/images/Linkedin.jpg" alt="Erthan NEMORIN">
+			</div>
+			<div class="hero__content">
+				<p class="hero__eyebrow">Parcours</p>
+				<h1>Qui est Erthan NEMORIN ?</h1>
+				<p>Étudiant en BUT Informatique, alternant Python au CEA et créateur de contenu.</p>
+			</div>
 		</div>
 		<div class="hero__path" aria-hidden="true"></div>
 	</header>
@@ -155,7 +162,7 @@
 
 		<section class="step">
 			<div class="cloud">
-				<h2>Vision — Candidature Master</h2>
+				<h2>Candidature Master</h2>
 				<p>Consolider un profil d'ingénieur produit : expertise technique forte (Python, web, data), exécution fiable en contexte professionnel (CEA), et capacité à valoriser et communiquer les projets.</p>
 			</div>
 			<div class="path-node" aria-hidden="true"></div>

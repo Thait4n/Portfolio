@@ -36,6 +36,22 @@ if (hasDoorScene) {
     },
     { passive: true }
   );
+
+  // Touch support (swipe up to open)
+  let touchStartY = 0;
+  window.addEventListener("touchstart", (e) => { touchStartY = e.touches[0].clientY; }, { passive: true });
+  window.addEventListener("touchmove", (e) => {
+    if (isRedirecting || autoMode || body.classList.contains("doors-open")) return;
+    const delta = (touchStartY - e.touches[0].clientY) * 4;
+    if (delta < 0) return;
+    targetProgress += delta;
+    touchStartY = e.touches[0].clientY;
+    if (targetProgress > MAX_SCROLL) targetProgress = MAX_SCROLL;
+    if (!isAnimating) {
+      isAnimating = true;
+      requestAnimationFrame(update);
+    }
+  }, { passive: true });
 } else {
   body.classList.add("projects-only");
 }
@@ -205,3 +221,51 @@ function drawMetricSparkline(canvas, values, color) {
 }
 
 initMetricCharts();
+
+// Touch support — swipe up to open the doors
+if (hasDoorScene) {
+  const scrollHint = document.getElementById("scroll-hint");
+
+  function hideHint() {
+    if (scrollHint) scrollHint.style.opacity = "0";
+  }
+
+  let touchStartY = 0;
+  window.addEventListener("touchstart", (e) => {
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+  window.addEventListener("touchmove", (e) => {
+    if (isRedirecting || autoMode || body.classList.contains("doors-open")) return;
+    const delta = (touchStartY - e.touches[0].clientY) * 5;
+    if (delta <= 0) return;
+    hideHint();
+    touchStartY = e.touches[0].clientY;
+    targetProgress += delta;
+    if (targetProgress > MAX_SCROLL) targetProgress = MAX_SCROLL;
+    if (!isAnimating) {
+      isAnimating = true;
+      requestAnimationFrame(update);
+    }
+  }, { passive: true });
+
+  window.addEventListener("wheel", hideHint, { once: true, passive: true });
+}
+
+// Hamburger nav toggle (all pages)
+const navToggle = document.getElementById("nav-toggle");
+const mainNav = document.getElementById("main-nav");
+if (navToggle && mainNav) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = mainNav.classList.toggle("is-open");
+    navToggle.classList.toggle("is-open", isOpen);
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+  // Close on link click
+  mainNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mainNav.classList.remove("is-open");
+      navToggle.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}

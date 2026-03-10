@@ -15,13 +15,16 @@
 <div id="project-container">
   <header class="topbar">
     <div class="logo">TH</div>
-    <nav class="nav">
+    <nav class="nav" id="main-nav">
       <a class="active" href="index.html">Accueil</a>
       <a href="presentation.html">Présentation</a>
       <a href="projets.html">Projets</a>
       <a href="collaboration.html">Collaborations</a>
       <a href="contact.html">Contact</a>
     </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
   <main class="page">
@@ -35,7 +38,7 @@
         </p>
         <div class="hero__actions" data-reveal>
           <a class="btn" href="https://www.youtube.com/@thatan" target="_blank" rel="noreferrer">YouTube</a>
-          <a class="btn btn--ghost" href="https://www.twitch.tv/im_thatan" target="_blank" rel="noreferrer">Twitch</a>
+          <a class="btn btn--ghost" href="https://www.behance.net/erthannmr" target="_blank" rel="noreferrer">Behance</a>
           <a class="btn btn--ghost" href="https://github.com/Thait4n" target="_blank" rel="noreferrer">GitHub</a>
         </div>
       </div>
@@ -197,6 +200,16 @@
       <a href="https://www.twitch.tv/im_thatan" target="_blank"><i class="fa-brands fa-twitch"></i></a>
       <a href="https://github.com/Thait4n" target="_blank"><i class="fa-brands fa-github"></i></a>
       <a href="mailto:erthan.pro@gmail.com"><i class="fa-solid fa-envelope"></i></a>  
+    </div>
+
+    <div class="scroll-hint" id="scroll-hint">
+      <span class="scroll-hint__desktop">
+        <i class="fa-solid fa-computer-mouse"></i> Défiler pour entrer
+      </span>
+      <span class="scroll-hint__mobile">
+        <i class="fa-solid fa-hand-pointer"></i> Balayer vers le haut
+      </span>
+      <span class="scroll-hint__arrow">&#8595;</span>
     </div>
   </div>
 
