@@ -705,6 +705,37 @@ body.projects-only {
   font-size: 0.9rem;
 }
 
+.cv-cta {
+  margin-top: 4px;
+}
+
+.cv-cta__inner {
+  border: 1px solid rgba(31, 217, 122, 0.25);
+  border-radius: 18px;
+  background: linear-gradient(130deg, rgba(31, 217, 122, 0.1), rgba(71, 232, 151, 0.03));
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.cv-cta__inner h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  letter-spacing: 0.8px;
+  margin-bottom: 4px;
+}
+
+.cv-cta__inner p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  max-width: 60ch;
+  margin: 0;
+}
+
 /* ── Behance embed section ───────────────────────────────────── */
 .behance-embed {
   padding: 80px var(--side);
