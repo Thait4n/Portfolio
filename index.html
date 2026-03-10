@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Erthan.pro</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+<!-- CONTENU PROJETS (en arrière plan) -->
+<div id="project-container">
+  <header class="topbar">
+    <div class="logo">ER</div>
+    <nav class="nav">
+      <a href="index.html">Accueil</a>
+      <a href="presentation.html">Présentation</a>
+      <a class="active" href="projets.html">Projet</a>
+      <a href="index.html#musique">Compétences</a>
+      <a href="index.html#disque">Contacts</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <div class="hero__text">
+        <p class="hero__kicker">Portfolio</p>
+        <h1>Mes créations</h1>
+        <p class="hero__sub">Descends pour voir mes derniers projets, UI/UX et créations visuelles.</p>
+      </div>
+      <div class="hero__glow" aria-hidden="true"></div>
+    </section>
+
+    <section class="showcase">
+      <div class="carousel">
+        <button class="carousel__btn" data-dir="prev" aria-label="Projet précédent">‹</button>
+        <div class="carousel__track">
+          <article class="project project--featured carousel__item">
+            <div class="project__media">
+              <img src="assets/images/Shay_antidote.png" alt="Projet Shay Jolie Garce">
+              <div class="project__overlay"></div>
+              <div class="project__labels">
+                <span>Web</span>
+                <span>Branding</span>
+                <span>2026</span>
+              </div>
+            </div>
+            <div class="project__content">
+              <h2>Mon dernier projet — Behance</h2>
+              <p>
+                Page Web sur Shay — Jolie Garce, avec un design sombre, contrasté et immersif.
+                Mise en avant des visuels et d’une navigation claire pour la musique et les projets
+              </p>
+              <div class="project__cta">
+                <a class="btn" href="#">Voir le projet</a>
+                <a class="btn btn--ghost" href="https://www.behance.net/erthannmr">Behance</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project project--featured carousel__item">
+            <div class="project__media">
+              <img src="assets/images/PHOTO_PP.png" alt="Projet identité visuelle">
+              <div class="project__overlay"></div>
+              <div class="project__labels">
+                <span>UI/UX</span>
+                <span>Concept</span>
+                <span>2025</span>
+              </div>
+            </div>
+            <div class="project__content">
+              <h2>Concept UI — Neon</h2>
+              <p>
+                Interface gaming avec effets de glow, micro‑interactions et typographies bold.
+              </p>
+              <div class="project__cta">
+                <a class="btn" href="#">Voir le projet</a>
+                <a class="btn btn--ghost" href="#">Dribbble</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <button class="carousel__btn" data-dir="next" aria-label="Projet suivant">›</button>
+      </div>
+    </section>
+
+    <section class="video">
+      <div class="video__text">
+        <p class="video__kicker">YouTube</p>
+        <h2>Dernière vidéo — Thatan</h2>
+        <p>Mes créations visuelles & documentaires. Clique pour voir la chaîne complète.</p>
+        <a class="btn" href="https://www.youtube.com/@thatan" target="_blank" rel="noreferrer">Voir la chaîne</a>
+      </div>
+      <div class="video__embed">
+        <iframe
+          src="https://www.youtube.com/embed/grFokdf-5Bk?rel=0&modestbranding=1"
+          title="Documentaire Thatan"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card" style="--i:1;">
+        <h3>Concept UI — Neon</h3>
+        <p>Interface gaming avec effets de glow, micro‑interactions et typographies bold.</p>
+      </article>
+      <article class="card" style="--i:2;">
+        <h3>Landing musique</h3>
+        <p>Landing minimaliste, typographie XXL et focus sur les visuels promotionnels.</p>
+      </article>
+      <article class="card" style="--i:3;">
+        <h3>Identité visuelle</h3>
+        <p>Palette mono‑chromatique, grille fluide et composants modulaires.</p>
+      </article>
+    </section>
+  </main>
+</div>
+
+<div id="scene">
+
+  <div id="panel-left" class="panel"></div>
+
+  <div id="panel-right" class="panel">
+    <h1>Erthan Nemorin</h1>
+    <p>Créateur Digital & Développeur Créatif</p>
+
+    <button id="enterBtn">Mes créations</button>
+
+    <div class="socials">
+      <a href="https://www.behance.net/erthannmr" target="_blank"><i class="fa-brands fa-behance"></i></a>
+      <a href="https://www.linkedin.com/in/erthan-nemorin-4249a22b4/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://www.youtube.com/@thatan" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://github.com/Thait4n" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="mailto:erthan.pro@gmail.com"><i class="fa-solid fa-envelope"></i></a>  
+    </div>
+  </div>
+
+</div>
+
+<audio id="music" src="assets/sounds/ambiance.mp3" loop></audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
