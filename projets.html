@@ -3,120 +3,172 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Mes projets</title>
-	<link rel="stylesheet" href="projets.css">
+	<title>Thatan | Projets</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
-	<header class="topbar">
-		<div class="logo">ER</div>
-		<nav class="nav">
-			<a href="index.html">Accueil</a>
-			<a href="presentation.html">Présentation</a>
-			<a class="active" href="projets.html">Projet</a>
-			<a href="index.html#musique">Compétences</a>
-			<a href="index.html#disque">Contacts</a>
-		</nav>
-	</header>
+<body class="projects-only">
+	<div id="project-container">
+		<header class="topbar">
+			<div class="logo">TH</div>
+			<nav class="nav">
+				<a href="index.html">Accueil</a>
+				<a href="presentation.html">Présentation</a>
+				<a class="active" href="projets.html">Projets</a>
+				<a href="#realisations">Réalisations</a>
+				<a href="#contact">Contact</a>
+			</nav>
+		</header>
 
-	<main class="page">
-		<section class="hero">
-			<div class="hero__text">
-				<p class="hero__kicker">Portfolio</p>
-				<h1>Mes créations</h1>
-				<p class="hero__sub">Descends pour voir mes derniers projets, UI/UX et créations visuelles.</p>
-			</div>
-			<div class="hero__glow" aria-hidden="true"></div>
-		</section>
-
-		<section class="showcase">
-			<div class="carousel">
-				<button class="carousel__btn" data-dir="prev" aria-label="Projet précédent">‹</button>
-				<div class="carousel__track">
-					<article class="project project--featured carousel__item">
-						<div class="project__media">
-							<img src="assets/images/Shay_antidote.png" alt="Projet Shay Jolie Garce">
-							<div class="project__overlay"></div>
-							<div class="project__labels">
-								<span>Web</span>
-								<span>Branding</span>
-								<span>2026</span>
-							</div>
-						</div>
-						<div class="project__content">
-							<h2>Mon dernier projet — Behance</h2>
-							<p>
-								Page Web sur Shay — Jolie Garce, avec un design sombre, contrasté et immersif.
-								Mise en avant des visuels et d’une navigation claire pour la musique et les projets.
-							</p>
-							<div class="project__cta">
-								<a class="btn" href="#">Voir le projet</a>
-								<a class="btn btn--ghost" href="https://www.behance.net/erthannmr">Behance</a>
-							</div>
-						</div>
-					</article>
-
-					<article class="project project--featured carousel__item">
-						<div class="project__media">
-							<img src="assets/images/PHOTO_PP.png" alt="Projet identité visuelle">
-							<div class="project__overlay"></div>
-							<div class="project__labels">
-								<span>UI/UX</span>
-								<span>Concept</span>
-								<span>2025</span>
-							</div>
-						</div>
-						<div class="project__content">
-							<h2>Concept UI — Neon</h2>
-							<p>
-								Interface gaming avec effets de glow, micro‑interactions et typographies bold.
-							</p>
-							<div class="project__cta">
-								<a class="btn" href="#">Voir le projet</a>
-								<a class="btn btn--ghost" href="#">Dribbble</a>
-							</div>
-						</div>
-					</article>
-
+		<main class="page">
+			<section class="hero" id="accueil">
+				<div class="hero__text">
+					<p class="hero__kicker" data-reveal>Portfolio Candidature Master</p>
+					<h1 data-reveal>Thatan, créateur engagé et développeur en BUT Informatique</h1>
+					<p class="hero__sub" data-reveal>
+						Je transforme des sujets de société en formats audiovisuels impactants, puis je construis
+						les expériences web qui les mettent en valeur. Objectif: relier narration, design et code.
+					</p>
+					<div class="hero__actions" data-reveal>
+						<a class="btn" href="https://www.youtube.com/@thatan" target="_blank" rel="noreferrer">YouTube</a>
+						<a class="btn btn--ghost" href="https://www.twitch.tv/im_thatan" target="_blank" rel="noreferrer">Twitch</a>
+						<a class="btn btn--ghost" href="https://github.com/Thait4n" target="_blank" rel="noreferrer">GitHub</a>
+					</div>
 				</div>
-				<button class="carousel__btn" data-dir="next" aria-label="Projet suivant">›</button>
-			</div>
-		</section>
 
-		<section class="video">
-			<div class="video__text">
-				<p class="video__kicker">YouTube</p>
-				<h2>Dernière vidéo — Thatan</h2>
-				<p>Mes créations visuelles & documentaires. Clique pour voir la chaîne complète.</p>
-				<a class="btn" href="https://www.youtube.com/@thatan" target="_blank" rel="noreferrer">Voir la chaîne</a>
-			</div>
-			<div class="video__embed">
-				<iframe
-					src="https://www.youtube.com/embed/grFokdf-5Bk?rel=0&modestbranding=1"
-					title="Documentaire Thatan"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-					referrerpolicy="strict-origin-when-cross-origin"
-					allowfullscreen
-				></iframe>
-			</div>
-		</section>
+				<div class="hero__metrics" data-reveal>
+					<article class="metric">
+						<p class="metric__value">13k+</p>
+						<p class="metric__label">abonnés YouTube</p>
+					</article>
+					<article class="metric">
+						<p class="metric__value">7.5k+</p>
+						<p class="metric__label">followers Twitch</p>
+					</article>
+					<article class="metric">
+						<p class="metric__value">+3M</p>
+						<p class="metric__label">vues cumulées sur YouTube</p>
+					</article>
+				</div>
+				<div class="hero__glow" aria-hidden="true"></div>
+			</section>
 
-		<section class="grid">
-			<article class="card" style="--i:1;">
-				<h3>Concept UI — Neon</h3>
-				<p>Interface gaming avec effets de glow, micro‑interactions et typographies bold.</p>
-			</article>
-			<article class="card" style="--i:2;">
-				<h3>Landing musique</h3>
-				<p>Landing minimaliste, typographie XXL et focus sur les visuels promotionnels.</p>
-			</article>
-			<article class="card" style="--i:3;">
-				<h3>Identité visuelle</h3>
-				<p>Palette mono‑chromatique, grille fluide et composants modulaires.</p>
-			</article>
-		</section>
-	</main>
+			<section class="identity-strip" data-reveal>
+				<article>
+					<h3>Créatif</h3>
+					<p>Mini-documentaires, storytelling visuel, direction artistique et montage.</p>
+				</article>
+				<article>
+					<h3>Tech</h3>
+					<p>BUT Informatique: web, logique logicielle, produits numériques orientés usage.</p>
+				</article>
+				<article>
+					<h3>Engagé</h3>
+					<p>Sujets de société, actions terrain, contenus qui ouvrent le débat.</p>
+				</article>
+			</section>
 
-	<script src="projets.js"></script>
+			<section class="video" id="realisations">
+				<div class="video__text">
+					<p class="video__kicker">YouTube</p>
+					<h2>Dernière vidéo + vidéo la plus vue</h2>
+					<p>
+						J'alterne formats récents et vidéos fortes en impact. Le documentaire sur la réalité des gangs
+						en Guadeloupe dépasse les 56 000 vues.
+					</p>
+					<a class="btn" href="https://www.youtube.com/@thatan" target="_blank" rel="noreferrer">Voir la chaîne</a>
+
+					<div class="video__highlights">
+						<article class="highlight">
+							<h3>Nouvelle vidéo</h3>
+							<p>Intégrée ici pour montrer la direction éditoriale actuelle.</p>
+						</article>
+						<article class="highlight">
+							<h3>Top performance</h3>
+							<p>"La réalité des gangs en Guadeloupe" - plus de 56k vues.</p>
+							<a href="https://www.youtube.com/results?search_query=La+r%C3%A9alit%C3%A9+des+Gangs+en+Guadeloupe+Thatan" target="_blank" rel="noreferrer">Retrouver la vidéo</a>
+						</article>
+					</div>
+				</div>
+				<div class="video__embed">
+					<iframe
+						src="https://www.youtube.com/embed/grFokdf-5Bk?si=JfrdYicKxzq-cbaz"
+						title="Documentaire Thatan"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen
+					></iframe>
+				</div>
+			</section>
+
+			<section class="cards-grid" data-reveal>
+				<article class="card card--media">
+					<img src="assets/images/PHOTO_PP.png" alt="Portrait de Thatan">
+					<div>
+						<h3>Meilleurs TikToks</h3>
+						<p>Formats courts à forte rétention, humour + angle sociétal.</p>
+						<a href="https://www.tiktok.com/@thatan" target="_blank" rel="noreferrer">Voir TikTok</a>
+					</div>
+				</article>
+
+				<article class="card card--media">
+					<img src="assets/images/Shay_antidote.png" alt="Projet Behance">
+					<div>
+						<h3>Direction artistique</h3>
+						<p>Conception d'univers visuels pour contenus YouTube et projets créatifs.</p>
+						<a href="https://www.behance.net/erthannmr" target="_blank" rel="noreferrer">Voir Behance</a>
+					</div>
+				</article>
+
+				<article class="card">
+					<h3>Réalisations code</h3>
+					<p>
+						Projets web et expérimentations front-end disponibles sur GitHub: architecture,
+						intégration, interactions et mise en production.
+					</p>
+					<a href="https://github.com/Thait4n" target="_blank" rel="noreferrer">Explorer GitHub</a>
+				</article>
+
+				<article class="card">
+					<h3>Collaborations</h3>
+					<p>
+						Collaborations avec d'autres créateurs et passages relayés par des médias locaux.
+						Approche: co-création, storytelling commun et diffusion multi-plateforme.
+					</p>
+				</article>
+
+				<article class="card">
+					<h3>Engagement associatif</h3>
+					<p>
+						Semi-marathon pour SOS Mediterranee (1h44:09) et marathon prevu le 12 avril pour SOS Amitie,
+						avec une strategie de visibilite video autour des associations.
+					</p>
+				</article>
+
+				<article class="card">
+					<h3>Positionnement Master</h3>
+					<p>
+						Profil hybride: competence technique + execution creative + impact narratif.
+						Je veux concevoir des projets utiles, exigeants et memorables.
+					</p>
+				</article>
+			</section>
+
+			<section class="contact" id="contact" data-reveal>
+				<h2>Discutons d'une collaboration ou d'une admission</h2>
+				<p>
+					Disponible pour echanges, entretiens et projets. Je peux presenter une selection de travaux
+					YouTube, Twitch, TikTok et projets de developpement.
+				</p>
+				<div class="contact__actions">
+					<a class="btn" href="mailto:erthan.pro@gmail.com">Contact Mail</a>
+					<a class="btn btn--ghost" href="https://www.linkedin.com/in/erthan-nemorin-4249a22b4/" target="_blank" rel="noreferrer">LinkedIn</a>
+				</div>
+			</section>
+		</main>
+	</div>
+
+	<script src="script.js"></script>
 </body>
 </html>
