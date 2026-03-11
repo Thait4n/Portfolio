@@ -28,7 +28,7 @@
         <p class="hero__kicker">Contact</p>
         <h1>Me contacter pour candidature, admission ou projet</h1>
         <p>
-          Priorite de contact: mail et LinkedIn. Tu peux aussi retrouver mon univers creatif sur Behance
+          Priorité de contact : mail et LinkedIn. Vous pouvez aussi retrouver mon univers créatif sur Behance
           et mes autres plateformes.
         </p>
       </section>
@@ -36,7 +36,12 @@
       <section class="contact-priority" data-reveal>
         <article class="priority-card priority-card--main">
           <p class="priority-label">Contact prioritaire</p>
-          <h2>erthan.pro@gmail.com</h2>
+          <div class="email-row">
+            <h2>erthan.pro@gmail.com</h2>
+            <button class="copy-btn" id="copyEmailBtn" title="Copier l'adresse" aria-label="Copier l'adresse mail">
+              <i class="fa-regular fa-copy"></i>
+            </button>
+          </div>
           <a class="btn" href="mailto:erthan.pro@gmail.com">Envoyer un mail</a>
         </article>
 
@@ -56,7 +61,7 @@
       <section class="contact-links" data-reveal>
         <a class="contact-link" href="https://www.youtube.com/@thatan" target="_blank" rel="noreferrer"><i class="fa-brands fa-youtube"></i><span>YouTube</span></a>
         <a class="contact-link" href="https://www.twitch.tv/im_thatan" target="_blank" rel="noreferrer"><i class="fa-brands fa-twitch"></i><span>Twitch</span></a>
-        <a class="contact-link" href="https://www.tiktok.com/@thatan" target="_blank" rel="noreferrer"><i class="fa-brands fa-tiktok"></i><span>TikTok</span></a>
+        <a class="contact-link" href="https://www.tiktok.com/@21thatan" target="_blank" rel="noreferrer"><i class="fa-brands fa-tiktok"></i><span>TikTok</span></a>
         <a class="contact-link" href="https://github.com/Thait4n" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
       </section>
 
@@ -76,5 +81,21 @@
   </div>
 
   <script src="script.js"></script>
+  <script>
+    const copyBtn = document.getElementById("copyEmailBtn");
+    if (copyBtn) {
+      copyBtn.addEventListener("click", () => {
+        navigator.clipboard.writeText("erthan.pro@gmail.com").then(() => {
+          const icon = copyBtn.querySelector("i");
+          icon.className = "fa-solid fa-check";
+          copyBtn.style.color = "#1fd97a";
+          setTimeout(() => {
+            icon.className = "fa-regular fa-copy";
+            copyBtn.style.color = "";
+          }, 2000);
+        });
+      });
+    }
+  </script>
 </body>
 </html>

@@ -6,8 +6,8 @@ const panelRight = document.getElementById("panel-right");
 const hasDoorScene = Boolean(scene && panelLeft && panelRight && btn);
 const body = document.body;
 
-const MAX_SCROLL = 2200;
-const EASE = 0.05;
+const MAX_SCROLL = 1400;
+const EASE = 0.1;
 
 let targetProgress = 0;
 let currentProgress = 0;
@@ -29,6 +29,9 @@ if (hasDoorScene) {
       if (targetProgress < 0) targetProgress = 0;
       if (targetProgress > MAX_SCROLL) targetProgress = MAX_SCROLL;
 
+      const hint = document.getElementById("scroll-hint");
+      if (hint) hint.style.opacity = "0";
+
       if (!isAnimating) {
         isAnimating = true;
         requestAnimationFrame(update);
@@ -47,6 +50,10 @@ if (hasDoorScene) {
     targetProgress += delta;
     touchStartY = e.touches[0].clientY;
     if (targetProgress > MAX_SCROLL) targetProgress = MAX_SCROLL;
+
+    const hint = document.getElementById("scroll-hint");
+    if (hint) hint.style.opacity = "0";
+
     if (!isAnimating) {
       isAnimating = true;
       requestAnimationFrame(update);
@@ -73,8 +80,8 @@ function update() {
 
   applyVisuals(ratio);
 
-  if (ratio >= 0.92) {
-    openProjects();
+  if (ratio >= 0.82) {
+    startAuto();
   } else if (currentProgress !== targetProgress) {
     requestAnimationFrame(update);
   } else {
@@ -86,12 +93,24 @@ function startAuto() {
   if (autoMode || isRedirecting || !hasDoorScene) return;
 
   autoMode = true;
-  scene.style.transition = "transform 1.6s ease-in-out";
-  panelLeft.style.transition = "transform 1.5s ease-in-out";
-  panelRight.style.transition = "transform 1.5s ease-in-out";
+
+  // Immediately allow clicks through the scene overlay
+  scene.style.pointerEvents = "none";
+
+  // Enable project container immediately so buttons work during final animation
+  const projectContainer = document.getElementById("project-container");
+  if (projectContainer) projectContainer.style.pointerEvents = "auto";
+
+  // Hide scroll hint
+  const hint = document.getElementById("scroll-hint");
+  if (hint) hint.style.opacity = "0";
+
+  scene.style.transition = "transform 0.7s ease-in-out";
+  panelLeft.style.transition = "transform 0.65s ease-in-out";
+  panelRight.style.transition = "transform 0.65s ease-in-out";
 
   applyVisuals(1);
-  setTimeout(openProjects, 900);
+  setTimeout(openProjects, 350);
 }
 
 function applyVisuals(ratio) {
@@ -113,6 +132,9 @@ function openProjects() {
   body.classList.add("doors-open");
   body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+
+  // Supprimer #scene du DOM après la fin de la transition (plus aucun blocage)
+  setTimeout(() => { scene.style.display = "none"; }, 900);
 }
 
 function initReveal() {
